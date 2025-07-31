@@ -1,45 +1,55 @@
-# vue-kavia
+# vue-kavia Notes Frontend
 
-This template should help get you started developing with Vue 3 in Vite.
+A minimalistic personal notes frontend built with Vue 3 and Vite.
 
-## Recommended IDE Setup
+## Features
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- Create, edit, delete, and view a list of personal notes.
+- Simple, light-themed UI.
+- Sidebar for navigation.
+- Main area for note content.
+- Uses the following color palette:
+  - Primary: #4f8cff
+  - Accent: #e1edff
+  - Secondary: #ffffff
 
-## Type Support for `.vue` Imports in TS
+## Getting Started
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
+### Project Setup
 
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
-
 ```sh
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
+### Environment Variables
+
+Currently, no required `.env` variables. For API integration, use `import.meta.env` (e.g., `import.meta.env.VITE_API_URL`) in your code and define keys in a `.env` file at project root.
+
+### Build/Type Check/Test
 
 ```sh
 npm run build
-```
-
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
 npm run test:unit
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
 npm run lint
 ```
+
+## Directory Structure
+
+- `src/stores/notes.ts` &ndash; Pinia store for notes CRUD
+- `src/components/Sidebar.vue` &ndash; Sidebar for note navigation and create
+- `src/components/NoteEditor.vue` &ndash; Note viewing & editing form
+- `src/components/MainLayout.vue` &ndash; Layout with sidebar + main area
+- `src/views/HomeView.vue` &ndash; Main entrypoint using layout and editor
+
+## Styling
+
+Palette and layout defined in `src/assets/main.css`.
+
+## Customization
+
+Adapt API/data logic as needed for real backend connectivity.
+

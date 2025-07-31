@@ -1,5 +1,13 @@
 @import './base.css';
 
+/* Notes app palette overrides */
+:root {
+  --note-primary: #4f8cff;
+  --note-accent: #e1edff;
+  --note-secondary: #ffffff;
+  --note-border: #e5e7eb;
+}
+
 #app {
   max-width: 1280px;
   margin: 0 auto;

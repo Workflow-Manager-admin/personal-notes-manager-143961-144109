@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import TheWelcome from '../components/TheWelcome.vue'
+import MainLayout from "../components/MainLayout.vue";
+import NoteEditor from "../components/NoteEditor.vue";
 </script>
 
 <template>
-  <main>
-    <TheWelcome />
-  </main>
+  <MainLayout>
+    <NoteEditor />
+  </MainLayout>
 </template>
